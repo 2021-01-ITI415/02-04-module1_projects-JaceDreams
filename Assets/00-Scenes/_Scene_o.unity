@@ -305,6 +305,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1502156085419488465, guid: a4a730013dab9084ba79fdab653c490e, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1502156085419488478, guid: a4a730013dab9084ba79fdab653c490e, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -357,6 +361,10 @@ PrefabInstance:
       propertyPath: speed
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 8554414938822478773, guid: a4a730013dab9084ba79fdab653c490e, type: 3}
+      propertyPath: applePrefab
+      value: 
+      objectReference: {fileID: 8976142936747782265, guid: a4a00636e2b1a5e4fb896d22d232e357, type: 3}
     - target: {fileID: 8554414938822478773, guid: a4a730013dab9084ba79fdab653c490e, type: 3}
       propertyPath: leftAndRightEdge
       value: 20

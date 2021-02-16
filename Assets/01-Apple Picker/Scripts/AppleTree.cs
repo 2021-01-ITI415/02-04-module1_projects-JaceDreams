@@ -24,7 +24,14 @@ public class AppleTree : MonoBehaviour {
     public float secondsBetweenAppleDrop;
 
     void Start() {
-        // Dropping apples every second 
+        // Dropping apples every second
+        Invoke ("DropApple", 2f);
+    }
+
+    void DropApple() {
+        GameObject apple = Instantiate<GameObject>(applePrefab);
+        apple.transform.position = transform.position;
+        Invoke("DropApple", secondsBetweenAppleDrop);
     }
 
     void Update() {
@@ -42,7 +49,7 @@ public class AppleTree : MonoBehaviour {
     }
 
     void FixedUpdate() {
-        // Changing Direction Randomly is now t
+        // Changing Direction Randomly is now time-based because of FixedUpdate()
         if (Random.value < chanceToChangeDirection) {
             speed *= -1; // Change direction
         }
