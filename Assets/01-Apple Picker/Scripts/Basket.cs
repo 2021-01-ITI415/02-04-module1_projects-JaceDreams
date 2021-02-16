@@ -5,7 +5,8 @@ using UnityEngine;
 public class Basket : MonoBehaviour {
 
     // Update is called once per frame
-    void Update() {
+    void Update()
+    {
         // Get the current screen position of the mouse from Input
         Vector3 mousePos2D = Input.mousePosition;
         // The Camera's z position sets how far to push the mouse into 3D
@@ -18,5 +19,13 @@ public class Basket : MonoBehaviour {
         Vector3 pos = this.transform.position;
         pos.x = mousePos3D.x;
         this.transform.position = pos;
+    }
+
+    void OnCollisionEnter(Collision coll) {
+        // Find out what hit this basket
+        GameObject collidedWith = coll.gameObject;
+        if (collidedWith.tag == "Apple") {
+                Destroy(collidedWith);
+        }
     }
 }
