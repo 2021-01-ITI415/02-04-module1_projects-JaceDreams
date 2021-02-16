@@ -354,6 +354,10 @@ PrefabInstance:
       value: AppleTree
       objectReference: {fileID: 0}
     - target: {fileID: 8554414938822478773, guid: a4a730013dab9084ba79fdab653c490e, type: 3}
+      propertyPath: speed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8554414938822478773, guid: a4a730013dab9084ba79fdab653c490e, type: 3}
       propertyPath: leftAndRightEdge
       value: 20
       objectReference: {fileID: 0}
