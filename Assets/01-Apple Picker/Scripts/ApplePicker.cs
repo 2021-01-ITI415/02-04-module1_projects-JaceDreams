@@ -11,11 +11,21 @@ public class ApplePicker : MonoBehaviour {
 
     // Start is called before the first frame update
     void Start() {
-        for (int i=0; i<numBaskets; i++) {
+        for (int i = 0; i < numBaskets; i++)
+        {
             GameObject tBasketGO = Instantiate<GameObject>(basketPrefab);
             Vector3 pos = Vector3.zero;
             pos.y = basketBottomY + (basketSpacingY * i);
             tBasketGO.transform.position = pos;
+        }
+    }
+
+    public void AppleDestroyed() {
+        // Destroyed all of the falling apples
+        GameObject[] tAppleArray = GameObject.FindGameObjectsWithTag("Apple");
+        foreach (GameObject tGO in tAppleArray)
+        {
+            Destroy(tGO);
         }
     }
 }
