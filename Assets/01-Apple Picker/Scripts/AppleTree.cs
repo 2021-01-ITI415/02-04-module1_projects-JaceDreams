@@ -18,10 +18,10 @@ public class AppleTree : MonoBehaviour {
     public float leftAndRightEdge = 10f;
 
     // Chance that the AppleTree will change directions
-    public float chanceToChangeDirection;
+    public float chanceToChangeDirections = 0.02f;
 
     // Rate at which Apple will be instantiated
-    public float secondsBetweenAppleDrop;
+    public float secondsBetweenAppleDrop = 1f; 
 
     void Start() {
         // Dropping apples every second
@@ -50,7 +50,7 @@ public class AppleTree : MonoBehaviour {
 
     void FixedUpdate() {
         // Changing Direction Randomly is now time-based because of FixedUpdate()
-        if (Random.value < chanceToChangeDirection) {
+        if (Random.value < chanceToChangeDirections) {
             speed *= -1; // Change direction
         }
     }
