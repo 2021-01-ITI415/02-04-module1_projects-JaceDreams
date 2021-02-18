@@ -1,12 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.Globalization;
+using System.Security.Cryptography;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour {
 
     public float speed;
+    private Vector3 moveDirection;
+
+    private bool jump;
+    private bool isGrounded;
+    public float jumpPower = 1f;
+
     public Text countText;
     public Text winText;
 
@@ -26,9 +33,24 @@ public class PlayerController : MonoBehaviour {
         float moveHorizontal = Input.GetAxis("Horizontal");
         float moveVertical = Input.GetAxis("Vertical");
 
+        jump = Input.GetButton("Jump");
+
         Vector3 movement = new Vector3 (moveHorizontal, 0.0f, moveVertical);
 
         rb.AddForce(movement * speed);
+
+        Jump();
+    }
+
+
+    void Jump()
+    {
+        isGrounded = Physics.Raycast(transform.position, Vector3.down, 1f);
+
+        if (jump && isGrounded)
+        {
+            rb.AddForce(Vector3.up * jumpPower, ForceMode.Impulse);
+        }
     }
 
     void OnTriggerEnter(Collider other) 
