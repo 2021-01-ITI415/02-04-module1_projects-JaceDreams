@@ -217,9 +217,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1255927804}
-  - {fileID: 608989923}
-  - {fileID: 1615893417}
-  - {fileID: 1347483742}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -452,7 +449,7 @@ GameObject:
   - component: {fileID: 608989925}
   - component: {fileID: 608989924}
   m_Layer: 0
-  m_Name: West Wall (1)
+  m_Name: West Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -469,8 +466,8 @@ Transform:
   m_LocalPosition: {x: -1.5, y: 0, z: 0}
   m_LocalScale: {x: 0.5, y: 2, z: 2.5}
   m_Children: []
-  m_Father: {fileID: 71218011}
-  m_RootOrder: 1
+  m_Father: {fileID: 855293219}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &608989924
 BoxCollider:
@@ -695,6 +692,39 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &855293218
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 855293219}
+  m_Layer: 0
+  m_Name: WallsStart
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &855293219
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 855293218}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 608989923}
+  - {fileID: 1615893417}
+  - {fileID: 1347483742}
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &858919376
 PrefabInstance:
@@ -1810,7 +1840,7 @@ GameObject:
   - component: {fileID: 1347483744}
   - component: {fileID: 1347483743}
   m_Layer: 0
-  m_Name: West Wall (3)
+  m_Name: East Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1827,8 +1857,8 @@ Transform:
   m_LocalPosition: {x: 1.5, y: 0, z: 0}
   m_LocalScale: {x: 0.5, y: 2, z: 2.5}
   m_Children: []
-  m_Father: {fileID: 71218011}
-  m_RootOrder: 3
+  m_Father: {fileID: 855293219}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &1347483743
 BoxCollider:
@@ -2121,7 +2151,7 @@ GameObject:
   - component: {fileID: 1615893419}
   - component: {fileID: 1615893418}
   m_Layer: 0
-  m_Name: West Wall (2)
+  m_Name: South Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2138,8 +2168,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: -1}
   m_LocalScale: {x: 2.5, y: 2, z: -0.5}
   m_Children: []
-  m_Father: {fileID: 71218011}
-  m_RootOrder: 2
+  m_Father: {fileID: 855293219}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &1615893418
 BoxCollider:
