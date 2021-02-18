@@ -45,7 +45,9 @@ public class PlayerController : MonoBehaviour {
 
     void Jump()
     {
-        isGrounded = Physics.Raycast(transform.position, Vector3.down, 1f);
+        LayerMask layer = 1 << gameObject.layer;
+        layer = ~layer;
+        isGrounded = Physics.CheckSphere(transform.position, 1f, layer);
 
         if (jump && isGrounded)
         {
