@@ -21,35 +21,43 @@ public class PlayerController : MonoBehaviour {
     private Rigidbody rb;
     private int count;
 
-    void Start ()
+    void Start()
     {
         rb = GetComponent<Rigidbody>();
+        jumpDirection = Vector3.up;
         count = 0;
         SetCountText();
         winText.text = "";
     }
 
-    void FixedUpdate ()
+    void Update()
     {
         float moveHorizontal = Input.GetAxis("Horizontal");
         float moveVertical = Input.GetAxis("Vertical");
-
         jump = Input.GetButton("Jump");
 
-        Vector3 movement = new Vector3 (moveHorizontal, 0.0f, moveVertical);
+        moveDirection = new Vector3 (moveHorizontal, 0.0f, moveVertical);
 
-        rb.AddForce(movement * speed);
+        
+    }
 
+    void FixedUpdate()
+    {
+        Move();
         Jump();
     }
 
-
-    void Jump()
+    void Move()
     {
+        rb.AddForce(moveDirection * speed);
+
         LayerMask layer = 1 << gameObject.layer;
         layer = ~layer;
         isGrounded = Physics.CheckSphere(transform.position, 1f, layer);
+    }
 
+    void Jump()
+    {
         if (jump && isGrounded)
         {
             rb.AddForce(jumpDirection * jumpPower, ForceMode.Impulse);
