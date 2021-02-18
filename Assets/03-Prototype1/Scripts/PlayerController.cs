@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour {
     private bool jump;
     private bool isGrounded;
     public float jumpPower = 1f;
+    private Vector3 jumpDirection;
 
     public Text countText;
     public Text winText;
@@ -51,7 +52,21 @@ public class PlayerController : MonoBehaviour {
 
         if (jump && isGrounded)
         {
-            rb.AddForce(Vector3.up * jumpPower, ForceMode.Impulse);
+            rb.AddForce(jumpDirection * jumpPower, ForceMode.Impulse);
+        }
+    }
+
+    void OnCollisionEnter(Collision collision)
+    {
+        //jumpDirection = collision.contacts[0].normal;
+    }
+
+    void OnCollisionStay(Collision collision)
+    {
+        jumpDirection = Vector3.zero;
+        foreach (ContactPoint c in collision.contacts)
+        {
+            jumpDirection += c.normal;
         }
     }
 
