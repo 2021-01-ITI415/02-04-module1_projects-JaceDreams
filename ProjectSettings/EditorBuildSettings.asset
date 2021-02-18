@@ -20,7 +20,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/00-Scenes/_Scene_0.unity
     guid: 6719ca36f932c4f4fa14f1b87c92721e
-  - enabled: 1
+  - enabled: 0
     path: Assets/00-Scenes/Pong.unity
     guid: f34ea8efcf506e2429ba68e9724a5030
   m_configObjects: {}
