@@ -519,11 +519,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6996fc801d004df4a8ff4491808b9b72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  uitLevel: {fileID: 0}
-  uitShots: {fileID: 0}
-  uitButton: {fileID: 0}
-  castlePos: {x: 0, y: 0, z: 0}
-  castles: []
+  uitLevel: {fileID: 904983168}
+  uitShots: {fileID: 1938493972}
+  uitButton: {fileID: 916972635}
+  castlePos: {x: 50, y: -9.5, z: 0}
+  castles:
+  - {fileID: 1722685722}
+  - {fileID: 1069120941}
   level: 0
   levelMax: 0
   shotsTaken: 0
@@ -755,6 +757,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 916972633}
   m_CullTransparentMesh: 0
+--- !u!1 &1069120941 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6594007381268551895, guid: 827cbc64f4ab4fe4fb7faa4d7652451a, type: 3}
+  m_PrefabInstance: {fileID: 1631162066}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1123519971
 GameObject:
   m_ObjectHideFlags: 0
@@ -1088,7 +1095,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6594007381268551896, guid: 827cbc64f4ab4fe4fb7faa4d7652451a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 75
+      value: 70
       objectReference: {fileID: 0}
     - target: {fileID: 6594007381268551896, guid: 827cbc64f4ab4fe4fb7faa4d7652451a, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1260,6 +1267,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1658874027}
   m_CullTransparentMesh: 0
+--- !u!1 &1722685722 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6594007381268551895, guid: 052ccef88600d4240a64a728511da8d3, type: 3}
+  m_PrefabInstance: {fileID: 6594007381344006944}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1733257229
 GameObject:
   m_ObjectHideFlags: 0
@@ -1619,7 +1631,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6594007381268551896, guid: 052ccef88600d4240a64a728511da8d3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 50
+      value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 6594007381268551896, guid: 052ccef88600d4240a64a728511da8d3, type: 3}
       propertyPath: m_LocalPosition.y
